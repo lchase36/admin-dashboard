@@ -1,0 +1,108 @@
+body,html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.container {
+	width: 100vw;
+	height: max(100vh, 570px);
+	display: grid;
+	grid-template: 
+					"sidebar header" 1fr
+					"sidebar content" 5fr
+					/ 200px 4fr;
+}
+
+.header {
+	grid-area: header;
+	display: grid;
+}
+
+.utilities {
+	margin: 10px 20px;
+	display: flex;
+	gap: 5px;
+}
+
+.search-icon svg {
+	height: 30px;
+	color: rgb(80, 80, 80);
+}
+
+.search-bar {
+	background-color: gainsboro;
+	border: 1px solid gainsboro;
+	border-radius: 15px;
+	height: 30px;
+	flex: 1;
+}
+
+.action-panel {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.sidebar {
+	background-color: rgb(27, 41, 55);
+	padding: 20px;
+	color: #F6F7F8;
+	grid-area: sidebar;
+	display: grid;
+	gap: 20px;
+	grid-template-rows: 80px;
+}
+
+.logo {
+	width: 100%;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 40px;
+	grid-auto-flow: column;
+	gap: 20px;
+	margin-bottom: 40px;
+}
+
+.logo svg {
+	height: 40px;
+}
+
+.logo span {
+	font-size: 22px;
+	font-weight: bold;
+	vertical-align: bottom;
+}
+
+.sidebar ul {
+	display: grid;
+	padding: 0;
+	list-style-type: none;
+	gap: 20px;
+	align-content: start;
+}
+
+li {
+	width: 100%;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 25px;
+	grid-auto-flow: column;
+	gap: 10px;
+}
+
+li > svg {
+	color: #F6F7F8;
+	height: 26px;
+}
+
+.sidebar span {
+	display: flex;
+	align-items: center;
+}
+.content {
+	background-color: gainsboro;
+	grid-area: content;
+}
