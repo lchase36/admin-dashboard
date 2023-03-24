@@ -14,15 +14,12 @@ body {
 	grid-template: 
 					"sidebar header" 1fr
 					"sidebar content" 5fr
-					/ 200px 4fr;
+					/ 225px 1fr;
 }
 
 .header {
 	grid-area: header;
 	display: grid;
-	box-shadow: 10px 9px 18px -11px rgba(0,0,0,0.75);
-	-webkit-box-shadow: 10px 9px 18px -11px rgba(0,0,0,0.75);
-	-moz-box-shadow: 10px 9px 18px -11px rgba(0,0,0,0.75);
 }
 
 .utilities {
@@ -101,6 +98,7 @@ body {
 .username {
 	margin: 15px 0 10px 0;
 	font-size: 24px;
+	font-weight: bold;
 }
 
 .actions {
@@ -119,7 +117,7 @@ body {
 	border-radius: 20px;
 	border: none;
 	background-color: rgb(27, 41, 55);
-	color: white;
+	color: #F6F7F8;
 	font-weight: bold;
 }
 
@@ -182,4 +180,61 @@ li > svg {
 .content {
 	background-color: gainsboro;
 	grid-area: content;
+	padding: 30px;
+	gap: 30px;
+	display: grid;
+	grid-template:
+				"projects announcements" 1fr
+				"projects trending" 1fr
+				/ 2fr 1fr;
+}
+
+h3 {
+	margin: 0 0 20px 0;
+	padding: 0;
+}
+
+.projects-container {
+	box-sizing: border-box;
+	grid-area: projects;
+}
+
+.projects {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+	grid-auto-rows: 200px;
+	gap: 20px;
+}
+
+.card {
+	background-color: #F6F7F8;
+	border-radius: 8px;
+	padding: 10px;
+	box-shadow: 10px 9px 18px -11px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 10px 9px 18px -11px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 9px 18px -11px rgba(0,0,0,0.75);
+	display: grid;
+	grid-template-rows: 2fr 4fr 1fr
+}
+
+.card-icons {
+	justify-items: right;
+	display: grid;
+	grid-auto-flow: column;
+	gap: 15px;
+	justify-content: right;
+	margin-right: 15px;
+}
+
+.card-icons > * {
+	height: 25px;
+}
+
+.announcements-container {
+	grid-area: announcements;
+	
+}
+
+.trending-container {
+	grid-area: trending;
 }
