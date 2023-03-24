@@ -20,12 +20,16 @@ body {
 .header {
 	grid-area: header;
 	display: grid;
+	box-shadow: 10px 9px 18px -11px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 10px 9px 18px -11px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 9px 18px -11px rgba(0,0,0,0.75);
 }
 
 .utilities {
 	margin: 10px 20px;
 	display: flex;
-	gap: 5px;
+	gap: 20px;
+	align-items: center;
 }
 
 .search-icon svg {
@@ -41,9 +45,82 @@ body {
 	flex: 1;
 }
 
+.account {
+	display: grid;
+	grid-template-columns: 60px 1fr;
+	justify-content: center;
+	align-items: center;
+}
+
+.avatar.small{
+	height: 40px;
+	width: 40px; 	
+	object-fit: cover;
+	border-radius: 50%;
+	margin: 0 15px 0 0;
+	justify-self: right;;
+}
+
+.username.small {
+	margin-right: 30px;
+	font-size: 18px;
+}
+
+.notification {
+	height: 25px;
+	width: auto;
+	color:rgb(80, 80, 80);
+	align-self: center;
+	justify-self: right;
+}
+
 .action-panel {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: 1fr 1fr;
+	justify-content: space-between;
+}
+
+.user-welcome {
+	display: grid;
+	grid-template-columns: 150px 2fr;
+	justify-content: center;
+}
+
+.avatar {
+	height: 80px;
+	width: 80px; 	
+	object-fit: cover;
+	border-radius: 50%;
+	margin-left: 50px;
+}
+
+.greeting {
+	margin: 15px 0
+}
+
+.username {
+	margin: 15px 0 10px 0;
+	font-size: 24px;
+}
+
+.actions {
+	display: grid;
+	justify-self: right;
+	margin-right: 50px;
+	grid-auto-flow: column;
+	justify-content: center;
+	gap: 15px;
+	align-items: center;
+}
+
+.actions button {
+	height: 40px;
+	width: 100px;
+	border-radius: 20px;
+	border: none;
+	background-color: rgb(27, 41, 55);
+	color: white;
+	font-weight: bold;
 }
 
 .sidebar {
